@@ -21,6 +21,7 @@ namespace Test
         [TestInitialize]
         public void Setup()
         {
+            _fixture=new Fixture();
             _page= new AngularTodoMvc(new NgWebDriver(new ChromeDriver()));
         }
 
@@ -29,7 +30,7 @@ namespace Test
         {
             var itemText = _fixture.Create<string>();
 
-            _page.NavigateTo().AddNewItem(itemText).ShouldNotBeNull();
+            _page.NavigateTo().AddNewItem(itemText).Text.ShouldEqual(itemText);
         }
 
         [TestCleanup]

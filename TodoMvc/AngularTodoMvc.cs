@@ -14,6 +14,7 @@ namespace TodoMvc
         public AngularTodoMvc(NgWebDriver driver)
         {
             _driver = driver;
+            _driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(5));
         }
 
         public AngularTodoMvc NavigateTo()
