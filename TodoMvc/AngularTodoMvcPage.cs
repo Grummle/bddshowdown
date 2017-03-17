@@ -12,16 +12,16 @@ using Protractor;
 
 namespace TodoMvc
 {
-    public class AngularTodoMvc : IDisposable
+    public class AngularTodoMvcPage : IDisposable
     {
         private readonly NgWebDriver _driver;
-        public AngularTodoMvc(NgWebDriver driver)
+        public AngularTodoMvcPage(NgWebDriver driver)
         {
             _driver = driver;
             _driver.Manage().Timeouts().SetScriptTimeout(TimeSpan.FromSeconds(5));
         }
 
-        public AngularTodoMvc NavigateTo()
+        public AngularTodoMvcPage NavigateTo()
         {
             _driver.Url = "http://todomvc.com/examples/angularjs/#/";
 
@@ -56,19 +56,19 @@ namespace TodoMvc
             return element;
         }
 
-        public AngularTodoMvc SetAll()
+        public AngularTodoMvcPage SetAll()
         {
             _driver.FindElement(By.Id("filters")).FindElement(By.LinkText("All")).Click();
             return this;
         }
 
-        public AngularTodoMvc SetActive()
+        public AngularTodoMvcPage SetActive()
         {
             _driver.FindElement(By.Id("filters")).FindElement(By.LinkText("Active")).Click();
             return this;
         }
 
-        public AngularTodoMvc SetCompleted()
+        public AngularTodoMvcPage SetCompleted()
         {
             _driver.FindElement(By.Id("filters")).FindElement(By.LinkText("Completed")).Click();
             return this;

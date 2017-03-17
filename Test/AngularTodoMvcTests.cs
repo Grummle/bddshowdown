@@ -13,14 +13,14 @@ namespace Test
     [TestClass]
     public class AngularTodoMvcTests
     {
-        private AngularTodoMvc _page;
+        private AngularTodoMvcPage _page;
         private Fixture _fixture;
 
         [TestInitialize]
         public void Setup()
         {
             _fixture=new Fixture();
-            _page= new AngularTodoMvc(new NgWebDriver(new ChromeDriver()));
+            _page= new AngularTodoMvcPage(new NgWebDriver(new ChromeDriver()));
         }
 
         [TestMethod]
