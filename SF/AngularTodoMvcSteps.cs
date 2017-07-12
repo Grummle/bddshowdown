@@ -132,7 +132,8 @@ namespace SF
         }
 
         [Given(@"I have clicked ""Completed""")]
-        public void GivenIHaveClicked(string p0)
+        [When(@"I have clicked ""Completed""")]
+        public void GivenIHaveClickedCompleted()
         {
             _context.Page.SetCompleted();
         }

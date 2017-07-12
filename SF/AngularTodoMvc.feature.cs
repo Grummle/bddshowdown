@@ -239,9 +239,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 59
  testRunner.And("I have created an Item with text \"Derp2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 60
- testRunner.And("I have clicked \"Completed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
  testRunner.When("I have marked the item \"Derp2\" completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 61
+ testRunner.When("I have clicked \"Completed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 62
  testRunner.Then("item \"Derp1\" should be gone", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 63

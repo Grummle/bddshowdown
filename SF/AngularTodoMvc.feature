@@ -57,7 +57,7 @@ Scenario: Should show item when completed and completed displayed
 	Given I have navigated to Angular TodoMvc
 	And I have created an Item with text "Derp1"
 	And I have created an Item with text "Derp2"
-	And I have clicked "Completed"
 	When I have marked the item "Derp2" completed
+	When I have clicked "Completed"
 	Then item "Derp1" should be gone
 	And item "Derp2" should exist
